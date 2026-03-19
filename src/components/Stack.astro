@@ -1,0 +1,143 @@
+---
+const categories = [
+	{
+		label: "Cloud & Infrastructure",
+		items: ["AWS / GCP", "Cloudflare", "DigitalOcean", "Vercel", "Docker"],
+	},
+	{
+		label: "AI & Machine Learning",
+		items: ["OpenAI / Anthropic", "LangChain", "Core ML", "Hugging Face", "Vector DBs"],
+	},
+	{
+		label: "Backend & Data",
+		items: ["Node.js", "Python", "PostgreSQL", "Redis", "GraphQL"],
+	},
+	{
+		label: "Frontend & Mobile",
+		items: ["React / Next.js", "Astro", "Swift / SwiftUI", "TypeScript", "Tailwind"],
+	},
+];
+---
+
+<section id="stack" class="stack">
+	<div class="stack-inner">
+		<div class="section-header">
+			<span class="section-tag">Technology</span>
+			<h2>Our stack</h2>
+			<p class="section-sub">
+				Cloud-native infrastructure and modern tooling for AI-powered products
+				that scale from zero to millions of users.
+			</p>
+		</div>
+		<div class="stack-grid">
+			{categories.map((cat) => (
+				<div class="stack-category">
+					<h4>{cat.label}</h4>
+					<div class="stack-items">
+						{cat.items.map((item) => (
+							<span class="stack-item">{item}</span>
+						))}
+					</div>
+				</div>
+			))}
+		</div>
+	</div>
+</section>
+
+<style>
+	.stack {
+		padding: 6rem 2rem;
+	}
+
+	.stack-inner {
+		max-width: var(--max-width);
+		margin: 0 auto;
+	}
+
+	.section-header {
+		text-align: center;
+		margin-bottom: 4rem;
+	}
+
+	.section-tag {
+		display: inline-block;
+		font-size: 0.7rem;
+		font-weight: 600;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+		color: var(--color-accent-light);
+		margin-bottom: 0.75rem;
+	}
+
+	.section-header h2 {
+		font-size: clamp(1.75rem, 4vw, 2.5rem);
+		font-weight: 700;
+		letter-spacing: -0.02em;
+		margin-bottom: 1rem;
+	}
+
+	.section-sub {
+		font-size: 1.05rem;
+		line-height: 1.7;
+		color: var(--color-text-muted);
+		max-width: 520px;
+		margin: 0 auto;
+	}
+
+	.stack-grid {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 1.25rem;
+	}
+
+	.stack-category {
+		padding: 1.75rem;
+		background: var(--color-bg-card);
+		border: 1px solid var(--color-border);
+		border-radius: 14px;
+		transition: border-color 0.2s;
+	}
+
+	.stack-category:hover {
+		border-color: var(--color-border-hover);
+	}
+
+	.stack-category h4 {
+		font-size: 0.7rem;
+		font-weight: 600;
+		letter-spacing: 0.06em;
+		text-transform: uppercase;
+		color: var(--color-accent-light);
+		margin-bottom: 1.25rem;
+	}
+
+	.stack-items {
+		display: flex;
+		flex-direction: column;
+		gap: 0.6rem;
+	}
+
+	.stack-item {
+		font-size: 0.85rem;
+		color: var(--color-text-muted);
+		padding: 0.5rem 0;
+		border-bottom: 1px solid var(--color-border);
+	}
+
+	.stack-item:last-child {
+		border-bottom: none;
+		padding-bottom: 0;
+	}
+
+	@media (max-width: 900px) {
+		.stack-grid {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+
+	@media (max-width: 500px) {
+		.stack-grid {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>
