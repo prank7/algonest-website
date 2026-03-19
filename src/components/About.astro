@@ -1,0 +1,140 @@
+---
+
+---
+
+<section id="about" class="about">
+	<div class="about-inner">
+		<div class="about-content">
+			<span class="section-tag">About</span>
+			<h2>An umbrella for <br />ambitious software</h2>
+			<p>
+				AlgoNest Labs is a software studio that sits at the intersection of
+				consulting and product building. We partner with companies to design
+				and deliver AI-powered solutions — and we build our own products
+				alongside that work.
+			</p>
+			<p>
+				Our approach is simple: treat every project — internal or external —
+				with the same engineering discipline. Ship early, iterate fast,
+				and never compromise on craft.
+			</p>
+		</div>
+		<div class="about-values">
+			<div class="value">
+				<div class="value-number">01</div>
+				<div class="value-content">
+					<h4>AI at the core</h4>
+					<p>Every solution we build starts with intelligence — not as an afterthought.</p>
+				</div>
+			</div>
+			<div class="value">
+				<div class="value-number">02</div>
+				<div class="value-content">
+					<h4>Ship with conviction</h4>
+					<p>We believe in velocity. Ideas are only as good as their execution.</p>
+				</div>
+			</div>
+			<div class="value">
+				<div class="value-number">03</div>
+				<div class="value-content">
+					<h4>Craft matters</h4>
+					<p>Elegant code, elegant interfaces. Details compound over time.</p>
+				</div>
+			</div>
+			<div class="value">
+				<div class="value-number">04</div>
+				<div class="value-content">
+					<h4>Build what we believe in</h4>
+					<p>Our internal products keep us sharp and honest about what works.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<style>
+	.about {
+		padding: 6rem 2rem;
+	}
+
+	.about-inner {
+		max-width: var(--max-width);
+		margin: 0 auto;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 5rem;
+		align-items: start;
+	}
+
+	.section-tag {
+		display: inline-block;
+		font-size: 0.7rem;
+		font-weight: 600;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+		color: var(--color-accent-light);
+		margin-bottom: 0.75rem;
+	}
+
+	.about-content h2 {
+		font-size: clamp(1.75rem, 4vw, 2.5rem);
+		font-weight: 700;
+		letter-spacing: -0.02em;
+		margin-bottom: 1.5rem;
+	}
+
+	.about-content p {
+		font-size: 1rem;
+		line-height: 1.75;
+		color: var(--color-text-muted);
+		margin-bottom: 1rem;
+	}
+
+	.about-values {
+		display: flex;
+		flex-direction: column;
+		gap: 1.5rem;
+	}
+
+	.value {
+		display: flex;
+		gap: 1.25rem;
+		padding: 1.5rem;
+		background: var(--color-bg-card);
+		border: 1px solid var(--color-border);
+		border-radius: 12px;
+		transition: border-color 0.2s;
+	}
+
+	.value:hover {
+		border-color: var(--color-border-hover);
+	}
+
+	.value-number {
+		font-family: var(--font-mono);
+		font-size: 0.75rem;
+		font-weight: 500;
+		color: var(--color-text-dim);
+		padding-top: 0.15rem;
+		flex-shrink: 0;
+	}
+
+	.value-content h4 {
+		font-size: 0.95rem;
+		font-weight: 600;
+		margin-bottom: 0.35rem;
+	}
+
+	.value-content p {
+		font-size: 0.825rem;
+		line-height: 1.5;
+		color: var(--color-text-muted);
+	}
+
+	@media (max-width: 800px) {
+		.about-inner {
+			grid-template-columns: 1fr;
+			gap: 3rem;
+		}
+	}
+</style>
